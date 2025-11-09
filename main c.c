@@ -1,0 +1,69 @@
+#include <stdio.h>
+
+void inputArray(int *arr, int n);
+void displayArray(int *arr, int n);
+void sumArray(int *arr, int n);
+void countPositiveNegative(int *arr, int n);
+
+int main()
+{
+    int arr[100];
+    int n;
+
+    printf("Enter the number of elements in the array: ");
+    scanf("%d", &n);
+
+    inputArray(arr, n);
+    displayArray(arr, n);
+    sumArray(arr, n);
+    countPositiveNegative(arr, n);
+
+    return 0;
+}
+
+void inputArray(int *arr, int n)
+{
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++)
+    {
+        scanf("%d", (arr + i)); // using pointer notation
+    }
+}
+
+void displayArray(int *arr, int n)
+{
+    printf("Array elements are: ");
+    for (int i = 0; i < n; i++)
+    {
+        printf("%d ", *(arr + i)); // pointer to each element
+    }
+    printf("\n");
+}
+
+void sumArray(int *arr, int n)
+{
+    int sum = 0;
+    for (int i = 0; i < n; i++)
+    {
+        sum += *(arr + i);
+    }
+    printf("Sum of array elements = %d\n", sum);
+}
+
+void countPositiveNegative(int *arr, int n)
+{
+    int pos = 0, neg = 0, zero = 0;
+    for (int i = 0; i < n; i++)
+    {
+        if (*(arr + i) > 0)
+            pos++;
+        else if (*(arr + i) < 0)
+            neg++;
+        else
+            zero++;
+    }
+
+    printf("Positive elements: %d\n", pos);
+    printf("Negative elements: %d\n", neg);
+    printf("Zero elements: %d\n", zero);
+}
