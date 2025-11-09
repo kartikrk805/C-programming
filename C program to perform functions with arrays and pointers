@@ -8,7 +8,7 @@ void countPositiveNegative(int *arr, int n);
 int main()
 {
     int arr[100];
-    int n;
+    int n,sum,pos_c,neg_c;
 
     printf("Enter the number of elements in the array: ");
     scanf("%d", &n);
@@ -67,3 +67,4 @@ void countPositiveNegative(int *arr, int n)
     printf("Negative elements: %d\n", neg);
     printf("Zero elements: %d\n", zero);
 }
+
