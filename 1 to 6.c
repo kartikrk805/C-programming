@@ -7,10 +7,11 @@ int main()
     {
         for (int j = 0; j < 3; j++)
         {
-            printf("%d ", m[i][j]); // print the numbers
+            printf("%d ", m[i][j]);
         }
-        printf("\n"); // move to next line after each row
+        printf("\n"); //
     }
 
     return 0;
 }
+
